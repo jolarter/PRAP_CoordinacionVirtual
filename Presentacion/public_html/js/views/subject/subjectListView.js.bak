@@ -1,0 +1,24 @@
+define([
+  'jquery',
+  'underscore',
+  'backbone',
+  'text!templates/cohort/subjectListTemplate.html'
+], function($, _, Backbone, subjectListTemplate){
+
+  var SubjectListView = Backbone.View.extend({
+    el: $("#container"),
+
+    render: function(){
+
+      var that = this;
+	  //..
+	  var data = {};
+      var compiledTemplate = _.template( subjectlistTemplate, data );
+      $("#container").html(compiledTemplate);
+    }
+
+  });
+
+  return SubjectListView;
+  
+});
