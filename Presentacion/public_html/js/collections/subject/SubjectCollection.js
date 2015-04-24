@@ -1,13 +1,13 @@
 define([
   'underscore',
   'backbone',
-  'models/subject/subjectModel'
+  'models/subject/SubjectModel'
 
   
-], function(_, Backbone, subjectModel){
+], function(_, Backbone, SubjectModel){
 
-     SubjectCollection = Backbone.Collection.extend({
-           model: MessageModuleModel,
+  var   subjectCollection = Backbone.Collection.extend({
+           model: SubjectModel,
 
         initialize : function(models, options) {},
       

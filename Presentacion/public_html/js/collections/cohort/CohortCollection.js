@@ -6,7 +6,7 @@ define([
   
 ], function(_, Backbone, CohortModel){
 
-     CohortCollection = Backbone.Collection.extend({
+    var CohortCollection = Backbone.Collection.extend({
            model: CohortModel,
 
       initialize : function(models, options) {},

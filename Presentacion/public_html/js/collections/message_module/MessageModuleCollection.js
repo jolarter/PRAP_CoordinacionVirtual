@@ -7,7 +7,7 @@ define([
 ], function(_, Backbone, MessageModuleModel){
 
    
-      MessageModuleCollection = Backbone.Collection.extend({
+     var MessageModuleCollection = Backbone.Collection.extend({
         model: MessageModuleModel,
 
       initialize : function(models, options) {},
