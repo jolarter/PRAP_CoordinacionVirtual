@@ -5,17 +5,18 @@
 // Their usage will become more apparent futher along in the tutorial.
 require.config({
   paths: {
-    jquery: 'libs/jquery/jquery-min',
+    jquery:     'libs/jquery/jquery-2.1.3.min',
+    bootstrap:  'libs/bootstrap/bootstrap.min',
     underscore: 'libs/underscore/underscore-min',
-    backbone: 'libs/backbone/backbone-min',
-    templates: '../templates'
-  }
-
+    backbone:   'libs/backbone/backbone-min',
+    templates:  '../templates'
+  } 
+  
 });
 
 require([
   // Load our app module and pass it to our definition function
-  'app',
+  'app','bootstrap'
 
 ], function(App){
   // The "app" dependency is passed in as "App"
