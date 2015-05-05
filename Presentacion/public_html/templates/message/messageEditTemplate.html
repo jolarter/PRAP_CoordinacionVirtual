@@ -1,69 +1,50 @@
 
-      <div class="container-fluid">
-	  
-      <div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          
-          <h1 class="page-header">&nbsp;</h1>
-          <h1 class="page-header">Creación Mensaje</h1>
-          <div class="row placeholders"></div>
-          <form action="ListarTutores.html" class="form-signin">
-            <h2 class="form-signin-heading">Nuevo Mensaje de Correo:</h2>
-            <p>&nbsp;</p>
-            <p>Asunto:</p>
-            <p>
-              <input type="asunto" autofocus required class="form-control" id="asunto" placeholder="Asunto">
-            Mensaje:</p>
-            <p>
+<form action="ListarTutores.html" class="form-signin">
+    <h2 class="form-signin-heading">Nuevo Mensaje de Correo:</h2>
+    <p>&nbsp;</p>
+    <p>Asunto:</p>
+    <p>
+        <input type="asunto" autofocus required class="form-control" id="asunto" placeholder="Asunto">
+        Mensaje:</p>
+    <p>
+        <textarea class="textarea" placeholder="Escriba aquí su Mensaje" style="width: 50%; height: 200px"></textarea>
+    </p>
 
-            <textarea class="textarea" placeholder="Escriba aquí su Mensaje" style="width: 50%; height: 200px"></textarea>
-             
+    <h4>Seleccione de modulos</h4>
+    <select class="select2" id="mySel3"  style="width: 50%;" multiple="multiple">
+        <optgroup label="Selección Multiple">
 
-            </p>
-        
-              <h4>Seleccione de modulos</h4>
-              <select class="select2" id="mySel3"  style="width: 50%;" multiple="multiple">
-              <optgroup label="Selección Multiple">
-    
-              <option>Ingeniera de Software I</option>
-              <option>Ingenieria de Software II</option>
-              <option>Practica Aplicada I</option>
-              <option>Herramientas de Programación</option>
-              <option>Verificacion de Algoritmos</option>
-    
-              </select>
-  
+            <option>Ingeniera de Software I</option>
+            <option>Ingenieria de Software II</option>
+            <option>Practica Aplicada I</option>
+            <option>Herramientas de Programación</option>
+            <option>Verificacion de Algoritmos</option>
 
-              <h4>A enviar</h4>
-              <select class="select3" id="mySel3" style="width: 50%;">
-                 <optgroup class="single" label="Seleccione:">
-                 <option>1 Dia</option>
-                 <option>2 Dias</option>
-                 <option>3 Dias</option>
-                 <option>1 Semana</option>
-                 <option>1 Mes</option>
-                </optgroup>
-              </select>
-  
-                  <p>
-                    <label>
-                      <input type="radio" name="antesdespues" value="antes" id="antesdespues_0">
-                      Antes del cohorte</label>
-                    <br>
-                    <label>
-                      <input type="radio" name="antesdespues" value="despues" id="antesdespues_1">
-                      Despues del cohorte</label>
-                    <br>
-                  </p>
-                  <p><br>
-                  </p>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Guardar</button>
-                </form>
-        </div>
-      </div>
-  </div>
+    </select>
+
+
+    <h4>A enviar</h4>
+    <select class="select3" id="mySel3" style="width: 50%;">
+        <optgroup class="single" label="Seleccione:">
+            <option>1 Dia</option>
+            <option>2 Dias</option>
+            <option>3 Dias</option>
+            <option>1 Semana</option>
+            <option>1 Mes</option>
+        </optgroup>
+    </select>
+
+    <p>
+        <label>
+            <input type="radio" name="antesdespues" value="antes" id="antesdespues_0">
+            Antes del cohorte</label>
+        <br>
+        <label>
+            <input type="radio" name="antesdespues" value="despues" id="antesdespues_1">
+            Despues del cohorte</label>
+        <br>
+    </p>
+    <p><br>
+    </p>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Guardar</button>
+</form>

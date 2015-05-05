@@ -1,65 +1,86 @@
-<div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <p>&nbsp;</p>
-          <h1 class="page-header">Lista de Mensajes</h1>
-          <div class="row placeholders"></div>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th width="18%" height="48">No. Mensaje</th>
-                  <th width="34%">Asunto del Mensaje</th>
-                  <th width="20%">Envio</th>
-                  <th width="28%">Editar / Inactivar</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Creación Cohorte</td>
-                  <td>10/03/2015</td>
-                  <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Inicio Clase</td>
-                  <td>10/03/2015</td>
-                  <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Inclusión alumno nuevo</td>
-                  <td>11/03/2015</td>
-                  <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Asignatura asignada</td>
-                  <td>11/03/2015</td>
-                  <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Nuevo tutor</td>
-                  <td>12/03/2015</td>
-                  <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Lista Modulos</td>
-                  <td>12/03/2015</td>
-                  <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Inicio Actividades</td>
-                  <td>12/03/2015</td>
-                  <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-  </div>	
+<h2>Lista de Mensajes</h2>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th width="1%" height="48">Id.</th>
+                <th width="48%">Asunto del Mensaje</th>
+                <th width="15%" colspan="2" style="text-align: center">Último envío</th>
+                <th width="18%">Editar / Inactivar</th>
+            </tr>
+        </thead>
+        <tbody class="table-hover">
+            <tr style="a">
+                <td>1</td>
+                <td><b>Creación Cohorte</b></td>
+                <td style="text-align: right">10/03/2015 </td>
+                <td><button type="button" class="btn btn-default tooltip-bottom" title="Ver historial de envíos">&raquo;</button></td>
+                <td><p><a class="btn btn-primary" href="#" role="button">Editar</a> 
+                        <a class="btn btn-danger" href="#" role="button">Inactivar</a></p></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><b>Inicio Clase.</b><br/><small>Estimado %%Nombre_corto%%, el día de hoy 
+                        inicia nuestra %%nombre_cohorte%%...
+                    </small></td>
+                <td style="text-align: right">10/03/2015</td>
+                <td><button type="button" class="btn btn-default">&raquo;</button></td>
+                <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><b>Inclusión alumno nuevo</b></td>
+                <td style="text-align: right">11/03/2015</td>
+                <td><button type="button" class="btn btn-default">&raquo;</button></td>
+                <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><b>Asignatura asignada</b></td>
+                <td style="text-align: right">11/03/2015</td>
+                <td><button type="button" class="btn btn-default">&raquo;</button></td>
+                <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><b>Nuevo tutor</b></td>
+                <td style="text-align: right">12/03/2015</td>
+                <td><button type="button" class="btn btn-default">&raquo;</button></td>
+                <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><b>Lista Modulos</b></td>
+                <td style="text-align: right">12/03/2015</td>
+                <td><button type="button" class="btn btn-default">&raquo;</button></td>
+                <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><b>Inicio Actividades</b></td>
+                <td style="text-align: right">12/03/2015</td>
+                <td><button type="button" class="btn btn-default">&raquo;</button></td>
+                <td><p><a class="btn btn-default" href="#" role="button">Editar</a> <a class="btn btn-default" href="#" role="button">Inactivar</a></p></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<nav style="text-align: right;">
+    <ul class="pagination">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -6,15 +6,15 @@ define([
 ], function($, _, Backbone, messageListTemplate){
 
   var MessageListView = Backbone.View.extend({
-    el: $("#container"),
+    el: $("#content"),
 
     render: function(){
 
       var that = this;
 	  //..
-	  var data = {};
-      var compiledTemplate = _.template( messagelistTemplate, data );
-      $("#container").html(compiledTemplate);
+      var data = {};
+      var compiledTemplate = _.template( messageListTemplate, data );
+      $("#content").html(compiledTemplate);
     }
 
   });
