@@ -6,15 +6,15 @@ define([
 ], function($, _, Backbone, subjectListTemplate){
 
   var SubjectListView = Backbone.View.extend({
-    el: $("#container"),
+    el: $("#content"),
 
     render: function(){
 
       var that = this;
 	  //..
-	  var data = {};
-      var compiledTemplate = _.template( subjectlistTemplate, data );
-      $("#container").html(compiledTemplate);
+      var data = {};
+      var compiledTemplate = _.template( subjectListTemplate, data);
+      $("#content").html(compiledTemplate);
     }
 
   });
