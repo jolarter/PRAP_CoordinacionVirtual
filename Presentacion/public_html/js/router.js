@@ -25,21 +25,21 @@ define([
       'EditMessage/':				'showEditMessage',
       'ListMessage/:from/:to':     'showListMessage',
       'EditMessage/:id':			'showEditMessage',
-	  'ListModule/':				'showListModule',
+      'ListModule/':				'showListModule',
       'ListModule/:from/:to':		'showlistModule',
-	  'EditModule/' :				'showEditModule',
+      'EditModule/':				'showEditModule',
       'EditModule/:id':			'showEditModule',
-	  'ListTutor/':				'showListTutor',
+      'ListTutor/':				'showListTutor',
       'ListTutor/:from/:to':		'showlistTutor',
-	  'EditTutor/':				'showEditTutor',
+      'EditTutor/':				'showEditTutor',
       'EditTutor/:id':				'showEditTutor',
-	  'ListCohort/':				'showListCohort',
+      'ListCohort/':				'showListCohort',
       'ListCohort/:from/:to':		'showListCohort',
-	  'EditCohort/':				'showEditCohort',
+      'EditCohort/':				'showEditCohort',
       'EditCohort/:id':			'showEditCohort',
-	  'ListSubject/':				'showListSubject',
+      'ListSubject/':				'showListSubject',
       'ListSubject/:from/:to':		'showListSubject',
-	  'EditSubject/':				'showEditSubject',
+      'EditSubject/':				'showEditSubject',
       'EditSubject/:id':			'showEditSubject',
 
       // Default
@@ -109,7 +109,7 @@ define([
         view.render(id);
     });
 
-    app_router.on('route:showListSubject', function(from, id){
+    app_router.on('route:showListSubject', function(from, to){
         f = from || 0;
 	t = to || 20;
         var view = new SubjectListView();
