@@ -6,7 +6,7 @@ define([
 ], function($, _, Backbone, cohortEditTemplate){
 
   var CohortEditView = Backbone.View.extend({
-    el: $("#container"),
+    el: $("#content"),
 
     render: function(){
 
@@ -14,7 +14,7 @@ define([
 	  //..
 	  var data = {};
       var compiledTemplate = _.template( cohortEditTemplate, data );
-      $("#container").html(compiledTemplate);
+      $("#content").html(compiledTemplate);
     }
 
   });
