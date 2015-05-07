@@ -6,7 +6,7 @@ define([
 ], function($, _, Backbone, cohortListTemplate){
 
   var CohortListView = Backbone.View.extend({
-    el: $("#container"),
+    el: $("#content"),
 
     render: function(){
 
@@ -14,7 +14,7 @@ define([
 	  //..
 	  var data = {};
       var compiledTemplate = _.template( cohortListTemplate, data );
-      $("#container").html(compiledTemplate);
+      $("#content").html(compiledTemplate);
     }
 
   });
