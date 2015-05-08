@@ -3,10 +3,10 @@ define([
   'underscore',
   'backbone',
   'text!templates/module/moduleListTemplate.html'
-], function($, _, Backbone, moduleListTemplate){
+], function($, _, Backbone, moduleTemplate){
 
   var ModuleListView = Backbone.View.extend({
-    el: $("#container"),
+    el: $("#content"),
 
     render: function(){
 
@@ -14,7 +14,7 @@ define([
 	  //..
 	  var data = {};
       var compiledTemplate = _.template( moduleTemplate, data );
-      $("#container").html(compiledTemplate);
+      $("#content").html(compiledTemplate);
     }
 
   });

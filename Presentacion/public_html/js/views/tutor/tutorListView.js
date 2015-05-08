@@ -3,10 +3,10 @@ define([
   'underscore',
   'backbone',
   'text!templates/tutor/tutorListTemplate.html'
-], function($, _, Backbone, tutorListTemplate){
+], function($, _, Backbone, tutorlistTemplate){
 
   var TutorListView = Backbone.View.extend({
-    el: $("#container"),
+    el: $("#content"),
 
     render: function(){
 
@@ -14,7 +14,7 @@ define([
 	  //..
 	  var data = {};
       var compiledTemplate = _.template( tutorlistTemplate, data );
-      $("#container").html(compiledTemplate);
+      $("#content").html(compiledTemplate);
     }
 
   });
