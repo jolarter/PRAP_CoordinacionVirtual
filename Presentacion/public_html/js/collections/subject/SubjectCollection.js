@@ -8,11 +8,7 @@ define([
 
   var   subjectCollection = Backbone.Collection.extend({
            model: SubjectModel,
-
-        initialize : function(models, options) {},
-      
-        model: models.Subject,
-        url: "http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.subject/",
+        url: "http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.subject/",
         sync: function (method, model, options) {
             options || (options = {});
             var errorHandler = {
