@@ -1,34 +1,33 @@
-    <form action="ListarTutores.html" class="form-signin">
-            <p></p>
-            <h4> <p>Asignatura:</p></h4>
-            <p>
-              <input type="asunto" autofocus required class="form-control" id="asunto" placeholder="Asunto">
-        <h4>Seleccione Facultad</h4>
-  <select class="select2" id="mySel2"  style="width: 50%;">
-        <optgroup class="single" label="SeleccionFacultad">
-        <option>	Facultad de Ciencias Administrativas, Económicas y Contables	</option>
-        <option>	Facultad de Ciencias Sociales	</option>
-        <option>	Facultad De Ingeniería y Ciencias Básicas	</option>
-        <option>	Facultad de Mercadeo, Comunicación y Artes	</option>
-  </select>
-        <h4>Seleccione Programa</h4>
-        <select class="select3" id="mySel3" style="width: 50%;">
-            <optgroup class="single" label="SeleccionPrograma">
-                <option>	Ingeniería de Sistemas	</option>
-                <option>	Administración de Empresas	</option>
-                <option>	Licenciatura en Matemática y Computación	</option>
-                <option>	Derecho	</option>
-                <option>	Psicología	</option>
-                <option>	Ingeniería Industrial	</option>
-                <option>	Negocios Internacionales	</option>
-                <option>	Administración Pública	</option>
-                <option>	Diseño Industrial	</option>
-                <option>	Economía	</option>
-                <option>	Ciencia Política	</option>
-                <option>	Contaduría Pública	</option>
-                <option>	Diseño Gráfico	</option>
+<form id="subjectform">
 
-            </optgroup>
-        </select>
-<button class="btn btn-lg btn-primary btn-block" type="submit">Grabar Asignatura</button>
-          </form>
+<legend> Asignatura Nueva</legend>
+ 
+ <div class = "form-group">
+     <label for="nameSubject">Asignatura</label>
+     <input type="text" autofocus required class="form-control" id="nameSubject" placeholder="description">
+  </div>
+ 
+  <div class="form-group">
+     <label for="facultySubject">Facultad</label>
+     
+     <select class="form-control" id="facultySubject">
+          <option> </option>
+        <% _.each(facultys, function(faculty){ %>
+            <option value="<%=faculty.get('idFaculty') %>"><%=faculty.get('name') %></option>
+        <% }); %>
+      </select>   
+  </div>
+ <div class="form-group">
+     <label for="departmentSubject">Departamento</label>
+     <select class="form-control" id="programSubject"  name="description">         
+          <option></option>
+        <% _.each(programs, function(program){ %>
+        <option value="<%=program.get('idProgram') %>"><%=program.get('name') %></option>
+        <% }); %>
+     </select>
+     
+     
+  </div>
+     <button class="btn btn-lg btn-primary" type="submit" id="submitButton">Grabar Asignatura</button> 
+ 
+</form>
