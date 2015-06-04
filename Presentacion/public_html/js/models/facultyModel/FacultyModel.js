@@ -4,7 +4,7 @@ define([
 ], function(_, Backbone) {
 
   var FacultyModel = Backbone.Model.extend({
-        urlRoot: "http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.faculty/",
+        urlRoot: "http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.faculty/",
         idAttribute: 'idFaculty',
         defaults: {
             name: "",
@@ -36,7 +36,7 @@ define([
                 }}
             
             if (method == 'create') {
-                options.url = 'http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.faculty/';
+                options.url = 'http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.faculty/';
             }
             var result = Backbone.sync(method, model, _.extend(options, errorHandler));
             return result;
