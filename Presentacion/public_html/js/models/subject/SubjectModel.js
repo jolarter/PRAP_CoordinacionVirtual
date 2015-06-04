@@ -4,24 +4,24 @@ define([
 ], function(_, Backbone) {
 
   var SubjectModel = Backbone.Model.extend({
-        urlRoot: "http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.subject/",
+        urlRoot: "http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.subject/",
         idAttribute: 'idSubject',
         defaults: {
             name: "",
-            description: ""
+            program: {idProgram:""}
         },
         toViewJson: function () {
             var result = this.toJSON(); // displayName property is used to render item in the list
             result.displayName = this.get('name');
             return result;
         },
-        isNew: function () {
-            // default isNew() method imlementation is
-            // based on the 'id' initialization which
-            // sometimes is required to be initialized.
-            // So isNew() is rediefined here
-            return this.notSynced;
-        },
+//        isNew: function () {
+//            // default isNew() method imlementation is
+//            // based on the 'id' initialization which
+//            // sometimes is required to be initialized.
+//            // So isNew() is rediefined here
+//            return this.notSynced;
+//        },
         sync: function (method, model, options) {
             options || (options = {});
             var errorHandler = {
@@ -32,11 +32,12 @@ define([
                     // headers has to be set on the REST server side.
                     // Otherwise the JS client has to be copied into the
                     // some (f.e. the same) Web project on the same domain
+                    console.log(jqXHR, textStatus, errorThrown);
                     alert('Unable to fulfil the request');
                 }}
             
             if (method == 'create') {
-                options.url = 'http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.subject/';
+                options.url = 'http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.subject/';
             }
             var result = Backbone.sync(method, model, _.extend(options, errorHandler));
             return result;
