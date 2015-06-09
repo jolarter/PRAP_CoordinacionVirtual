@@ -1,31 +1,29 @@
-
-      
-          <p>&nbsp;</p>
-          <h1 class="page-header">Creacion de Cohortes</h1>
-          <div class="row placeholders"></div>
-          <form action="ListarCohortes.html" class="form-signin">
-            <h2 class="form-signin-heading">Por favor diligencie los campos:</h2>
-            <p>&nbsp;</p>
-            <p>Nombre Cohorte:</p>
-            <p>
-              <input type="nombrecohorte" id="nombrecohorte" class="form-control" placeholder="Nombre Cohorte" required autofocus>
-              
-              <div class="alert alert-error" id="alert">
-        
+ <p>&nbsp;</p>
+ <h1 class="page-header">Creacion de Cohortes</h1>
+    <div class="row placeholders"></div>
+    <form id="cohortForm" >
+    <h2 class="form-signin-heading">Por favor diligencie los campos:</h2>
+     <p>&nbsp;</p>
+      <p>Nombre Cohorte:</p>
+       <p>
+        <input type="text" id="nameCohort" class="form-control" placeholder="Nombre Cohorte" required autofocus>
+        <div class="alert alert-error" id="alert">
         </div>
-              
+         <p>&nbsp;</p>  
            <p>Fecha de Inicio:</p>
-            <p>
-           <input type="text" class="form-control" value="" id="dp4" placeholder="Fecha Inicio">
-            </p>
-            <p>
-                Fecha de Final:
-            
-           <input type="text" class="form-control" value="" id="dp5" placeholder="Fecha Final">
-  
-            </p>
-            <p>&nbsp;</p>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Crear</button>
-          </form>
+           <p>
+           <input type="text" id="startDate" class="form-control" placeholder="Starting Date" required autofocus>
+          
+           </p>
+        
+     <p>&nbsp;</p>
+     <p> Fecha de Final:
+      <input type="text" id="endDate" class="form-control" placeholder="End Date" required autofocus>
+      <in
+     </p>
+     <p>&nbsp;</p>
+     <button  class="btn btn-lg btn-primary btn-block" type="submit" id="submitButton">Crear</button>
+    
+    </form>
        
           

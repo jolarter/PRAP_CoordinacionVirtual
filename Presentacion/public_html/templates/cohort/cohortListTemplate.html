@@ -1,5 +1,5 @@
   
-          <p>&nbsp;</p>
+        <p>&nbsp;</p>
           <h1 class="page-header">Lista de Cohortes</h1>
           <div class="row placeholders"></div>
           <div class="table-responsive">
@@ -13,49 +13,19 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>PRIMER COHORTE PRIMER BLOQUE 2015</td>
-                  <td>10/01/2015</td>
-                  <td>09/03/2015</td>
+                  <% _.each(cohorts, function(cohort){ %>
+                <tr>    
+                  <td><%= cohort.get('name')%></td>
+                 <td><%= cohort.get('startDate')%></td>
+                  <td><%= cohort.get('endDate')%></td>
+                              
                   <td><a class="btn btn-primary" href="#" role="button">Activar</a> </td>
                 </tr>
                 <tr>
-                  <td>PRIMER COHORTE SEGUNDO BLOQUE 2015</td>
-                  <td>10/03/2015</td>
-                  <td>09/05/2015</td>
-                   <td><a class="btn btn-primary" href="#" role="button">Activar</a> </td>
-                </tr>
-                <tr>
-                  <td>SEGUNDO COHORTE PRIMER BLOQUE 2015</td>
-                  <td>10/07/2015</td>
-                  <td>10/09/2015</td>
-                   <td><a class="btn btn-primary" href="#" role="button">Activar</a> </td>
-                </tr>
-                <tr>
-                  <td>SEGUNDO COHORTE SEGUNDO BLOQUE 2015</td>
-                  <td>10/11/2015</td>
-                  <td>09/01/2016</td>
-                   <td><a class="btn btn-danger" href="#" role="button">Inactivar</a> </td>
-                </tr>
-                <tr>
-                  <td>TERCER COHORTE PRIMER BLOQUE 2015</td>
-                  <td>10/01/2015</td>
-                  <td>09/03/2015</td>
-                  <td><a class="btn btn-primary" href="#" role="button">Activar</a> </td>
-                </tr>
-                <tr>
-                  <td>TERCER COHORTE SEGUNDO BLOQUE 2015</td>
-                  <td>10/05/2015</td>
-                  <td>09/07/2015</td>
-                   <td><a class="btn btn-danger" href="#" role="button">Inactivar</a> </td>
-                </tr>
-                <tr>
-                  <td>CUARTO COHORTE PRIMER BLOQUE 2015</td>
-                  <td>10/07/2015</td>
-                  <td>09/09/2015</td>
-                   <td><a class="btn btn-danger" href="#" role="button">Inactivar</a> </td>
-                </tr>
+                <% }); %>    
+                 
               </tbody>
             </table>
           </div>
+     
      

@@ -1,25 +1,20 @@
 define([
   'underscore',
-  'backbone',
+  'backbone'
 ], function(_, Backbone) {
 
   var CohortModel = Backbone.Model.extend({
-        urlRoot: "http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.cohort/",
+        urlRoot: "http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.cohort/",
         idAttribute: 'idCohort',
         defaults: {
-            name: ""
+          name: "",
+          startDate: "",
+          endDate: ""
         },
         toViewJson: function () {
             var result = this.toJSON(); // displayName property is used to render item in the list
             result.displayName = this.get('name');
-            return result;
-        },
-        isNew: function () {
-            // default isNew() method imlementation is
-            // based on the 'id' initialization which
-            // sometimes is required to be initialized.
-            // So isNew() is rediefined here
-            return this.notSynced;
+           return result;
         },
         sync: function (method, model, options) {
             options || (options = {});
@@ -35,7 +30,7 @@ define([
                 }}
             
             if (method == 'create') {
-                options.url = 'http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.cohort/';
+                options.url = 'http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.cohort/';
             }
             var result = Backbone.sync(method, model, _.extend(options, errorHandler));
             return result;
@@ -44,6 +39,6 @@ define([
         
     });
 
-  return CohortModel;
+    return CohortModel;
 
 });
