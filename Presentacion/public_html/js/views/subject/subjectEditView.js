@@ -17,24 +17,47 @@ define([
         var that = this;
         var faculty = new FacultyCollection();
         
-        if(options.id){
+        if(options){
+            subjectModel = new SubjectModel({idSubject: options})
+            subjectModel.fetch({
+                success:function(subject){
+                    faculty.fetch({  
+                        success:function(fac){
+                            that.listFacultys= fac.models;
+                             var program = new ProgramCollection();
+                            var data = { facultys:that.listFacultys, subjectModel: subject};
+                            var compiledTemplate = _.template(subjectEditTemplate,data);
+                            that.$el.html(compiledTemplate);
+                            $("#programSubject > option").each(function(){
+                                //alert(this.text + '' + this.value);
+                                //if(this.value == subject.get('program').idProgram){
+                                //    this.selected = true;
+                                //}
+                                this.value = subject.get('program').idProgram;
+                                this.text = subject.get('program').name;
+                                this.selected = true;
+                            });
+               
+                        },
+                        error: function(e){
+                            console.log(e);
+                        }
+                }); 
+                 
+                }
+            });
+            
             
         }else{
             faculty.fetch({  
               success:function(fac){
                   that.listFacultys= fac.models;
                    var program = new ProgramCollection();
-                  program.fetch({  
-                    success:function(prog){
-                        that.listPrograms= prog.models;
-                        var data = {programs:that.listPrograms, facultys:that.listFacultys};
-                        var compiledTemplate = _.template(subjectEditTemplate,data);
-                        that.$el.html(compiledTemplate);
-                    },
-                    error: function(e){
-                        console.log(e);
-                    }
-                });
+                  var data = { facultys:that.listFacultys, subjectModel: null};
+                  var compiledTemplate = _.template(subjectEditTemplate,data);
+                  that.$el.html(compiledTemplate);
+                 
+               
               },
               error: function(e){
                   console.log(e);
@@ -50,11 +73,13 @@ define([
         this.collection = new SubjectCollection();
         var attr = {
             name:$("#nameSubject").val(), 
-            program: {idProgram:$("#programSubject").val()}};
-        this.model = new SubjectModel(attr);
-        this.model.notSynced = true;
-        this.collection.create(attr,{
+            program: {idProgram:$("#programSubject").val()}
+        };
+            this.model = new SubjectModel(attr);
+            this.model.notSynced = true;
+            this.collection.create(attr,{
                     success: function (model) {
+                        location.href = "#/ListSubject/";
                         //router.navigate('#/EditSubject/'+model.id,{triger:true});  
                     }
                 }
@@ -65,10 +90,10 @@ define([
         var program = new ProgramCollection();
                 program.fetch({  
                     success:function(prog){
+                        $('#programSubject').html('');
                         for(i=0; i< prog.length; i++){
                          if(prog.models[i].get('faculty').idFaculty == $(ev.currentTarget).val()){
-                          
-                                console.log(prog.models[i].get('name'))
+                           $('#programSubject').append("<option value='"+prog.models[i].get('idProgram')+"'>"+prog.models[i].get('name')+"</option>");   
                           }   
                         }
                     }
