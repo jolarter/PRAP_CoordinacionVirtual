@@ -4,7 +4,7 @@
  
  <div class = "form-group">
      <label for="nameSubject">Asignatura</label>
-     <input type="text" autofocus required class="form-control" id="nameSubject" placeholder="description">
+     <input type="text" autofocus required class="form-control" id="nameSubject" placeholder="description" value="<%= (subjectModel) ? subjectModel.get('name'): '' %>">
   </div>
  
   <div class="form-group">
@@ -17,13 +17,16 @@
         <% }); %>
       </select>   
   </div>
+  
+    <%if(subjectModel){%>
+    <input type='hidden' value= "<%=subjectModel.get('idSubject') %>"/>
+    <% }%>
+
+    
  <div class="form-group">
      <label for="departmentSubject">Departamento</label>
      <select class="form-control" id="programSubject"  name="description">         
           <option></option>
-        <% _.each(programs, function(program){ %>
-        <option value="<%=program.get('idProgram') %>"><%=program.get('name') %></option>
-        <% }); %>
      </select>
      
      
