@@ -11,9 +11,7 @@ define([
        var MessageCollection = Backbone.Collection.extend({
              model: MessageModel,
 
-      initialize : function(models, options) {},
-        model: models.Message,
-        url: "http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.message/",
+        url: "http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.message/",
         sync: function (method, model, options) {
             options || (options = {});
             var errorHandler = {

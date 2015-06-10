@@ -4,7 +4,7 @@ define([
 ], function(_, Backbone) {
 
   var MessageModuleModel = Backbone.Model.extend({
-        urlRoot: "http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.messagemodule/",
+        urlRoot: "http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.messagemodule/",
         idAttribute: 'idMessageModule',
         sync: function (method, model, options) {
             options || (options = {});
@@ -20,7 +20,7 @@ define([
                 }}
             
             if (method == 'create') {
-                options.url = 'http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.messagemodule/';
+                options.url = 'http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.messagemodule/';
             }
             var result = Backbone.sync(method, model, _.extend(options, errorHandler));
             return result;

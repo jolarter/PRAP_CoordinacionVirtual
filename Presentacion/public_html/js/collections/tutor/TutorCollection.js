@@ -1,16 +1,15 @@
 define([
   'underscore',
   'backbone',
-  'models/tutor/tutorModel'
+  'models/tutor/TutorModel'
 
   
-], function(_, Backbone, tutorModel){
+], function(_, Backbone, TutorModel){
 
        TutorCollection = Backbone.Collection.extend({
-        model: tutorModel,
-        initialize : function(models, options) {},
-        model: models.Tutor,
-        url: "http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.tutor/",
+        model: TutorModel,
+
+        url: "http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.tutor/",
         sync: function (method, model, options) {
             options || (options = {});
             var errorHandler = {

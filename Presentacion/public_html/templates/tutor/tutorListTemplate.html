@@ -1,47 +1,26 @@
-<div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <p>&nbsp;</p>
-          <h1 class="page-header">Lista de Tutores</h1>
-          <div class="row placeholders"></div>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
+<legend>Lista de Tutores</legend>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                  <th width="18%" height="48">Nombre Tutor</th>
-                  <th width="34%">Apellido Tutor</th>
-                  <th width="20%">Correo Tutor</th>
-                  <th width="28%">Estado</th>
+                  <th width="18%" height="48">Nombres</th>
+                  <th width="18%">Apellidos</th>
+                  <th width="20%">Correo Institucional</th>
+                  <th width="15%">Estado</th>
+                  <th width="20%">Editar</th>
                 </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Julian</td>
-                  <td>Olarte</td>
-                  <td>jolarte@poligran.edu.co</td>
-                  <td>Activo</td>
+            </thead>
+            <tbody class="table-hover">
+               <%_.each(tutors,function(tutor){%>
+                <tr style="a">
+                   <td><%tutor.get('names')%></td>
+                  <td><%tutor.get('surnames')%></td>
+                  <td><%tutor.get('institutional_email')%></td>
+                  <td><%tutor.get('state')%></td>
+                  <td><p><a class="btn btn-primary" href="#" role="button">Editar</a> 
                 </tr>
-                <tr>
-                  <td>Juan</td>
-                  <td>Perez</td>
-                  <td>jperez@poligran.edu.co</td>
-                  <td>Inactivo</td>
-                </tr>
-                <tr>
-                  <td>Pedro</td>
-                  <td>Pinto</td>
-                  <td>ppinto@poligran.edu.co</td>
-               	<td>Activo</td>
-                </tr>
-                <tr>
-                  <td>Luis</td>
-                  <td>Rodriguez</td>
-                  <td>lrodriguez@poligran.edu.co</td>
-                  <td>Activo</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-  </div>
+                <%});%>
+            </tbody>
+        </table>
+    </div>
+  

@@ -1,54 +1,45 @@
-  <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <p>&nbsp;</p>
-          <h1 class="page-header">Crear Modulo</h1>
+  
+          <legend>Modulo Nuevo</legend>
           <div class="row placeholders"></div>
           <form action="ListarTutores.html" class="form-signin">
             <p></p>
             
             
-              <h4>Asignatura</h4>
-              <select class="select1" id="mySel1" style="width: 50%;">
-                <optgroup class="single" label="SeleccioneAsignatura">
-                  <option>Ingeniera de Software I</option>
-                  <option>Ingenieria de Software II</option>
-                  <option>Practica Aplicada I</option>
-                  <option>Herramientas de Programación</option>
-                  <option>Verificacion de Algoritmos</option>
-                </optgroup>
-              </select>
+    <div class = "form-group">
+        <label for="subjectModule">Asignatura</label>
+        <select class="form-control" id="subjectModule" name="description1">
+            <option></option>
+            <option>Ingeniera de Software I</option>
+            <option>Ingenieria de Software II</option>
+            <option>Practica Aplicada I</option>
+            <option>Herramientas de Programación</option>
+            <option>Verificacion de Algoritmos</option>
+        </select>
+    </div>
         
-              <h4>Seleccione cohorte</h4>
-                <select class="select2" id="mySel2"  style="width: 50%;">
-                  <optgroup class="single" label="SeleccioneCohorte">
-    
-                    <option>Cohorte 1: 10/01/2015 -> 09/03/2015</option>
-                    <option>Cohorte 2: 10/03/2015 -> 09/05/2015</option>
-                    <option>Cohorte 3: 10/07/2015 -> 10/09/2015</option>
-                    <option>Cohorte 4: 10/11/2015 -> 09/01/2016</option>
-                    <option>Cohorte 5: 10/01/2015 -> 09/03/2015</option>
-                    <option>Cohorte 6: 10/05/2015 -> 09/07/2015</option>
-                    <option>Cohorte 7: 10/07/2015 -> 09/09/2015</option>
-    
-               </select>
-  
-
-              <h4>Seleccione Tutor</h4>
-              <select class="select3" id="mySel3" style="width: 50%;">
-              <optgroup class="single" label="Selecciontutor">
-            		<option>Julian Olarte</option>
-            		<option>Juan Perez</option>
-            		<option>Pedro Pinto</option>
-            		<option>Luis Rodriguez</option>
-              </optgroup>
-               </select>
-  
-            </p>
-
-            </p>
-              <button class="btn btn-lg btn-primary btn-block" type="submit">Crear Modulo</button>
-          </form>
-        </div>
-      </div>
+    <div class = "form-group">
+        <label for="cohortModule">Cohorte</label>  
+        <select class="form-control" id="cohortModule"  name="description2">
+            <option></option>
+            <option>Cohorte 1: 10/01/2015 -> 09/03/2015</option>
+            <option>Cohorte 2: 10/03/2015 -> 09/05/2015</option>
+            <option>Cohorte 3: 10/07/2015 -> 10/09/2015</option>
+            <option>Cohorte 4: 10/11/2015 -> 09/01/2016</option>
+            <option>Cohorte 5: 10/01/2015 -> 09/03/2015</option>
+            <option>Cohorte 6: 10/05/2015 -> 09/07/2015</option>
+            <option>Cohorte 7: 10/07/2015 -> 09/09/2015</option>    
+        </select>
   </div>
+
+    <div class = "form-group">
+        <label for="tutorModule">Tutor</label>  
+        <select class="form-control" id="tutorModule" name="description3">
+            <option></option>
+            <option>Julian Olarte</option>
+            <option>Juan Perez</option>
+            <option>Pedro Pinto</option>
+            <option>Luis Rodriguez</option>
+        </select>
+    </div>       
+    <button class="btn btn-lg btn-primary" type="submit" id="summitButton2">Guardar Modulo</button>
+</form>

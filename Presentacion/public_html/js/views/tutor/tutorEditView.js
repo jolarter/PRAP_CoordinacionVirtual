@@ -6,7 +6,7 @@ define([
 ], function($, _, Backbone, tutorEditTemplate){
 
   var TutorEditView = Backbone.View.extend({
-    el: $("#content"),
+    el:"#content",
 
     render: function(){
 
@@ -14,7 +14,7 @@ define([
 	  //..
 	  var data = {};
       var compiledTemplate = _.template( tutorEditTemplate, data );
-      $("#content").html(compiledTemplate);
+      $el.html(compiledTemplate);
     }
 
   });

@@ -5,10 +5,7 @@ define([
 
   var ModuleCollection = Backbone.Collection.extend({
         model: ModuleModel,
-        
-        initialize : function(models, options) {},
-        model: models.MessageModule,
-        
+       
         url: "http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.module/",
         sync: function (method, model, options) {
             options || (options = {});

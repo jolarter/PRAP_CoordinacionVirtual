@@ -1,67 +1,66 @@
-<div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <p>&nbsp;</p>
-          <h1 class="page-header">Creacion de Tutores</h1>
-          <div class="row placeholders"></div>
-          <form action="ListarTutores.html" class="form-signin">
-            <h2 class="form-signin-heading">Por favor diligencie los campos:</h2>
-            <p>&nbsp;</p>
-            <p>Nombre Tutor:</p>
-            <p>
-              <input type="nombretutor" id="nombretutor" class="form-control" placeholder="Nombre Tutor" required autofocus>
-            Apellido Tutor:</p>
-            <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy"></div>
-            <p>
-              <input type="apellidotutor" id="apellidotutor" class="form-control" placeholder="Apellido Tutor" required autofocus>
-
-            </p>
-            <p>Genero:</p>
-            <p>
-              <label>
-                <input type="radio" name="Genero" value="m" id="Genero_0">
-                Masculino</label>
-               	<label>
-               	<input type="radio" name="Genero" value="f" id="Genero_1">
-                Femenino</label>
-              <br>
-            </p>
-            <p>Usuario:
-              <input type="usuario" id="usuario" class="form-control" placeholder="Usuario" required autofocus>
-            </p>
-            <p>Correo Personal:
-              <input type="correopersonal" id="correopersonal" class="form-control" placeholder="Correo Personal" required autofocus>
-            </p>
-            <p>Correo Institucional:
-              <input type="correoinstitucional" id="correoinstitucional" class="form-control" placeholder="Correo Institucional" required autofocus>
-            </p>
-            <p>Celular:
-              <input type="celular" id="fechafinal5" class="form-control" placeholder="Fecha Final" required autofocus>
-            </p>
-            <p>Tipo de Contrato:
-              <input type="tipocontrato" id="tipocontrato" class="form-control" placeholder="Tipo de contrato" required autofocus>
-            </p>
-            <p>Cedula:
-              <input type="cedula" id="cedula" class="form-control" placeholder="Cedula" required autofocus>
-            </p>
-            <p>Direccion:
-              <input type="direccion" id="direccion" class="form-control" placeholder="Direccion" required autofocus>
-            </p>
-            <p>Estado:</p>
-            <p>
-              <label>
-                <input type="radio" name="estado" value="activo" id="estado_0">
-                Activo</label>
-              <label>
-                <input type="radio" name="estado" value="inactivo" id="estado_1">
-              Inactivo</label>
-              <label>
-                <input type="radio" name="estado" value="nota" id="estado_2">
-              Inactivo Por Nota</label>
-              <br>
-            </p>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Crear</button>
-          </form>
+<legend>Tutor Nuevo</legend>
+    <form action="ListarTutores.html" class="form-signin">
+        <div class = "form-group">
+            <label for="nameTutor">Nombre Tutor</label>
+            <input type="text" id="nameTutor" class="form-control" placeholder="decripcion" required autofocus>
+        </div>   
+        
+        <div class = "form-group">
+            <label for="lastNameTutor">Apellido Tutor</label>
+            <input type="text" id="lastNameTutor" class="form-control" placeholder="descrpcion" required autofocus>
         </div>
-      </div>
-  </div>
+       <div class = "form-group">
+            <label for="cedulaTutor">Numero de Cedula</label>
+            <input type="text" id="cedulaTutor" class="form-control" placeholder="descripcion" required autofocus>
+         </div>
+         
+        <div class = "form-group">
+            <label for="generoTutor">Genero</label>
+                <input type="radio" name="Genero" value="m" id="Genero_0">
+                <label>Masculino</label>
+               	<input type="radio" name="Genero" value="f" id="Genero_1">
+                <label>Femenino</label>
+              <br>
+         </div>
+
+                   
+        <div class = "form-group">
+            <label for="celularTutor">Celular</label>
+             <input type="text" id="celularTutor" class="form-control" placeholder="descripcion" required autofocus>
+         </div>
+           <div class = "form-group">
+            <label for="tipoContratoTutor">Tipo de Contrato</label>
+            <input type="text" id="tipoContratoTutor" class="form-control" placeholder="descripcion" required autofocus>
+         </div>
+
+          <div class = "form-group">
+            <label for="direccionTutor">Direccion</label>
+            <input type="text" id="direccionTutor" class="form-control" placeholder="descripcion" required autofocus>
+         </div>
+
+         <div class = "form-group">
+            <label for="usuarioTutor">Usuario</label>
+            <input type="usuario" id="usuario" class="form-control" placeholder="Usuario" required autofocus>
+         </div>
+         
+         <div class = "form-group">
+            <label for="correoPTutor">Correo Personal</label>
+            <input type="correopersonal" id="correopersonal" class="form-control" placeholder="Correo Personal" required autofocus>
+         </div>
+         
+         <div class = "form-group">
+            <label for="correoITutor">Correo Institucional</label>
+            <input type="correoinstitucional" id="correoinstitucional" class="form-control" placeholder="Correo Institucional" required autofocus>
+         </div>
+           
+        <div class = "form-group">
+            <label for="estadoTutor">Estado</label>
+            <input type="radio" name="estado" value="activo" id="estado_0">
+            <label>Activo</label>
+            <input type="radio" name="estado" value="inactivo" id="estado_1">
+            <label>Inactivo</label>
+            <input type="radio" name="estado" value="nota" id="estado_2">
+            <label>Inactivo Por Nota</label>
+         </div> 
+        <button class="btn btn-lg btn-primary" type="summit" id="summitButton">Guardar Tutor</button> 
+    </form>

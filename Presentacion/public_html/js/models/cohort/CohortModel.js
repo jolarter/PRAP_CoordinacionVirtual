@@ -4,7 +4,7 @@ define([
 ], function(_, Backbone) {
 
   var CohortModel = Backbone.Model.extend({
-        urlRoot: "http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.cohort/",
+        urlRoot: "http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.cohort/",
         idAttribute: 'idCohort',
         defaults: {
             name: ""
@@ -35,7 +35,7 @@ define([
                 }}
             
             if (method == 'create') {
-                options.url = 'http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.cohort/';
+                options.url = 'http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.cohort/';
             }
             var result = Backbone.sync(method, model, _.extend(options, errorHandler));
             return result;

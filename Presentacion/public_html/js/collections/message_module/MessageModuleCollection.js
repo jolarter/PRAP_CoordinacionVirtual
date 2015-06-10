@@ -10,9 +10,7 @@ define([
      var MessageModuleCollection = Backbone.Collection.extend({
         model: MessageModuleModel,
 
-      initialize : function(models, options) {},
-        model: models.MessageModule,
-        url: "http://localhost:10202/Logica/webresources/edu.poli.prap.cv.data.messagemodule/",
+        url: "http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.messagemodule/",
         sync: function (method, model, options) {
             options || (options = {});
             var errorHandler = {
