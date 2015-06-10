@@ -9,6 +9,7 @@ define([
     var CohortCollection = Backbone.Collection.extend({
            model: CohortModel,
 
+     
         url: "http://localhost:8080/Logica/webresources/edu.poli.prap.cv.data.cohort/",
         sync: function (method, model, options) {
             options || (options = {});
